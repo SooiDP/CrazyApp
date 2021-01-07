@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import SDWebImage
+import Alamofire
 
-class SecondViewController: UIViewController {
+class GalleryViewController: UIViewController {
+    
+    let headers: HTTPHeaders = [
+        "x-api-key": "8eb84f83-3fbd-4d06-8bc8-e2a80f9350c1"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
+
 
