@@ -17,7 +17,7 @@ class RandomImageViewController: UIViewController {
         "x-api-key": "8eb84f83-3fbd-4d06-8bc8-e2a80f9350c1"
     ]
     
-    var myData:JSON?
+    var myData:String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,14 @@ class RandomImageViewController: UIViewController {
         getImgData()
     }
     
+    
+    
     func getImgData() {
         AF.request("https://api.thecatapi.com/v1/images/search", headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json[0]["url"])")
+                self.myData = json[0]["url"].string
             case .failure(let error):
                 print(error)
             }

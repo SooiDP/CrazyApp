@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 import Alamofire
 
-class GalleryViewController: UIViewController {
+class GalleryViewController: UITableViewController {
     
     let headers: HTTPHeaders = [
         "x-api-key": "8eb84f83-3fbd-4d06-8bc8-e2a80f9350c1"
