@@ -21,6 +21,9 @@
 		C2808FA825A77CBC00D979DB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C2808FA725A77CBC00D979DB /* Alamofire */; };
 		C2808FAA25A78B9C00D979DB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808FA925A78B9C00D979DB /* Response.swift */; };
 		C2808FAD25A78FD500D979DB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C2808FAC25A78FD500D979DB /* SwiftyJSON */; };
+		C2808FB025A9E28F00D979DB /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C2808FAF25A9E28F00D979DB /* Realm */; };
+		C2808FB225A9E28F00D979DB /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C2808FB125A9E28F00D979DB /* RealmSwift */; };
+		C2808FB425A9F14900D979DB /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808FB325A9F14900D979DB /* Animal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,7 @@
 		C2808FA225A625E800D979DB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C2808FA425A77BD100D979DB /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C2808FA925A78B9C00D979DB /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		C2808FB325A9F14900D979DB /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,10 +47,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2808FB225A9E28F00D979DB /* RealmSwift in Frameworks */,
 				C2808FA825A77CBC00D979DB /* Alamofire in Frameworks */,
 				C2808FA025A38ED300D979DB /* SDWebImageMapKit in Frameworks */,
 				C2808FAD25A78FD500D979DB /* SwiftyJSON in Frameworks */,
 				C2808F9E25A38ED300D979DB /* SDWebImage in Frameworks */,
+				C2808FB025A9E28F00D979DB /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,7 @@
 				C2808F9625A3894300D979DB /* Info.plist */,
 				C2808FA425A77BD100D979DB /* TableViewCell.swift */,
 				C2808FA925A78B9C00D979DB /* Response.swift */,
+				C2808FB325A9F14900D979DB /* Animal.swift */,
 			);
 			path = CrazyApp;
 			sourceTree = "<group>";
@@ -108,6 +115,8 @@
 				C2808F9F25A38ED300D979DB /* SDWebImageMapKit */,
 				C2808FA725A77CBC00D979DB /* Alamofire */,
 				C2808FAC25A78FD500D979DB /* SwiftyJSON */,
+				C2808FAF25A9E28F00D979DB /* Realm */,
+				C2808FB125A9E28F00D979DB /* RealmSwift */,
 			);
 			productName = CrazyApp;
 			productReference = C2808F8325A3893E00D979DB /* CrazyApp.app */;
@@ -141,6 +150,7 @@
 				C2808F9C25A38ED300D979DB /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				C2808FA625A77CBC00D979DB /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C2808FAB25A78FD500D979DB /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				C2808FAE25A9E28E00D979DB /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = C2808F8425A3893E00D979DB /* Products */;
 			projectDirPath = "";
@@ -170,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2808F8D25A3893E00D979DB /* GalleryViewController.swift in Sources */,
+				C2808FB425A9F14900D979DB /* Animal.swift in Sources */,
 				C2808F8B25A3893E00D979DB /* RandomImageViewController.swift in Sources */,
 				C2808FA325A625E800D979DB /* DetailViewController.swift in Sources */,
 				C2808FA525A77BD100D979DB /* TableViewCell.swift in Sources */,
@@ -399,6 +410,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		C2808FAE25A9E28E00D979DB /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -421,6 +440,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C2808FAB25A78FD500D979DB /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		C2808FAF25A9E28F00D979DB /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2808FAE25A9E28E00D979DB /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		C2808FB125A9E28F00D979DB /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2808FAE25A9E28E00D979DB /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

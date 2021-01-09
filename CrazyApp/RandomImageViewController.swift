@@ -10,6 +10,7 @@ import UIKit
 import SDWebImage
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
 class RandomImageViewController: UIViewController {
 
@@ -18,28 +19,79 @@ class RandomImageViewController: UIViewController {
     ]
     
     var myData:String?
+    
+//    let config = Realm.Configuration(
+//        schemaVersion: 1,
+//        migrationBlock: { migration, oldSchemaVersion in
+//            if(oldSchemaVersion < 1) {
+//                migration.enumerateObjects(ofType: Animal.className()) { oldObject, newObject in
+//                    let url = oldObject!["url"] as! String
+//
+//                    if (url.hasPrefix("https://cdn2.thedogapi")) {
+//                        newObject!["kind"] = "cat"
+//                    } else {
+//                        newObject!["kind"] = "dog"
+//                    }
+//                }
+//            }
+//    })
+//
+//    Realm.Configuration.defaultConfiguration = config
+    
+    let realm = try! Realm()
 
+    @IBOutlet var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        getImgData()
     }
     
+    @IBAction func fetchCatImage() {
+        getImgData(kind: "cat")
+    }
     
+    @IBAction func fetchRandomImage() {
+        let number = Int.random(in: 0..<10)
+        var kind:String
+        if (number < 5) {
+            kind = "cat"
+        } else {
+            kind = "dog"
+        }
+        getImgData(kind: kind)
+    }
     
-    func getImgData() {
-        AF.request("https://api.thecatapi.com/v1/images/search", headers: headers).responseJSON { response in
+    @IBAction func fetchDogImage() {
+        getImgData(kind: "dog")
+    }
+    
+    func getUrl(kind: String) -> String {
+        if (kind == "dog") {
+            return "https://api.thedogapi.com/v1/images/search"
+        }
+        return "https://api.thecatapi.com/v1/images/search"
+    }
+    
+    func getImgData(kind: String) {
+        let url = getUrl(kind: kind)
+        AF.request(url, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
+                let animal = Animal()
                 let json = JSON(value)
                 self.myData = json[0]["url"].string
+                animal.url = json[0]["url"].string ?? ""
+                animal.kind = kind
+                try! self.realm.write {
+                    self.realm.add(animal)
+                }
+                self.imageView.sd_setImage(with: URL(string: animal.url), placeholderImage: UIImage(named: "placeholder.png"))
             case .failure(let error):
                 print(error)
             }
             
         }
     }
-
-
 }
 
