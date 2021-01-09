@@ -34,8 +34,8 @@ class GalleryViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-        cell.textLabel?.text = Array(realm.objects(Animal.self))[indexPath.row].kind
-        cell.imageView?.sd_setImage(with: URL(string: Array(realm.objects(Animal.self))[indexPath.row].url), placeholderImage: UIImage(named: "placeholder.png"))
+        cell.textLabel?.text = "A very cute " + Array(realm.objects(Animal.self))[indexPath.row].kind
+        cell.imageView?.sd_setImage(with: URL(string: Array(realm.objects(Animal.self))[indexPath.row].url), placeholderImage:UIImage(named: "placeholder"))
         return cell
     }
     

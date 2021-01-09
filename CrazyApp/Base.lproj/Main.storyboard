@@ -36,22 +36,24 @@
                                     <action selector="fetchCatImage" destination="9pv-A4-QxB" eventType="touchUpInside" id="YG8-fx-G6T"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Idn-ec-d7S">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Idn-ec-d7S">
                                 <rect key="frame" x="0.0" y="44" width="414" height="682"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="q9V-sg-AJ9" firstAttribute="leading" secondItem="DOk-y1-5Gs" secondAttribute="trailing" constant="82.5" id="1hu-HH-05j"/>
-                            <constraint firstItem="Bh4-1Z-rwi" firstAttribute="top" secondItem="Idn-ec-d7S" secondAttribute="bottom" constant="8" id="6UE-YO-ZZk"/>
-                            <constraint firstItem="Bh4-1Z-rwi" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="8XK-Gi-Vdw"/>
-                            <constraint firstItem="Bh4-1Z-rwi" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="66" id="TL4-6R-fIT"/>
-                            <constraint firstItem="Idn-ec-d7S" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Y1n-80-hw7"/>
-                            <constraint firstItem="Idn-ec-d7S" firstAttribute="centerX" secondItem="DOk-y1-5Gs" secondAttribute="centerX" id="a1b-Op-v9W"/>
-                            <constraint firstItem="DOk-y1-5Gs" firstAttribute="baseline" secondItem="q9V-sg-AJ9" secondAttribute="baseline" id="fRf-a6-o48"/>
-                            <constraint firstItem="Idn-ec-d7S" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="hQJ-gQ-5Kp"/>
-                            <constraint firstItem="Idn-ec-d7S" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="oUK-in-7I6"/>
-                            <constraint firstItem="Bh4-1Z-rwi" firstAttribute="baseline" secondItem="DOk-y1-5Gs" secondAttribute="baseline" id="vN2-ib-wXx"/>
+                            <constraint firstItem="Idn-ec-d7S" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="52M-Lu-3NM"/>
+                            <constraint firstItem="Bh4-1Z-rwi" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="66" id="JMA-do-8PS"/>
+                            <constraint firstItem="Idn-ec-d7S" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="MMx-HP-IRJ"/>
+                            <constraint firstItem="Idn-ec-d7S" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="acH-E2-BTj"/>
+                            <constraint firstItem="DOk-y1-5Gs" firstAttribute="leading" secondItem="Bh4-1Z-rwi" secondAttribute="trailing" constant="82.5" id="bep-cE-dR4"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="DOk-y1-5Gs" secondAttribute="bottom" id="buE-u6-pVb"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="q9V-sg-AJ9" secondAttribute="trailing" constant="66" id="dPt-ER-WTV"/>
+                            <constraint firstItem="DOk-y1-5Gs" firstAttribute="baseline" secondItem="q9V-sg-AJ9" secondAttribute="baseline" id="f7O-SP-lU3"/>
+                            <constraint firstItem="Idn-ec-d7S" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="fpC-Hk-2W5"/>
+                            <constraint firstItem="Bh4-1Z-rwi" firstAttribute="baseline" secondItem="DOk-y1-5Gs" secondAttribute="baseline" id="ljm-JJ-eoe"/>
+                            <constraint firstItem="Bh4-1Z-rwi" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="ng7-J9-IXn"/>
+                            <constraint firstItem="q9V-sg-AJ9" firstAttribute="leading" secondItem="DOk-y1-5Gs" secondAttribute="trailing" constant="82.5" id="y9j-MF-qow"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -138,7 +140,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QWD-su-zGB">
-                                            <rect key="frame" x="87" y="-43" width="327" height="129.5"/>
+                                            <rect key="frame" x="87" y="-43" width="81" height="130"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
