@@ -13,10 +13,14 @@ import SwiftyJSON
 import RealmSwift
 
 class RandomImageViewController: UIViewController {
+    
+    let animalDb = AnimalPersistence()
 
     let headers: HTTPHeaders = [
         "x-api-key": "8eb84f83-3fbd-4d06-8bc8-e2a80f9350c1"
     ]
+    
+    var delegate:AnimalDelegate?
     
     var myData:String?
     
@@ -28,17 +32,15 @@ class RandomImageViewController: UIViewController {
 //                    let url = oldObject!["url"] as! String
 //
 //                    if (url.hasPrefix("https://cdn2.thedogapi")) {
-//                        newObject!["kind"] = "cat"
-//                    } else {
 //                        newObject!["kind"] = "dog"
+//                    } else {
+//                        newObject!["kind"] = "cat"
 //                    }
 //                }
 //            }
 //    })
 //
 //    Realm.Configuration.defaultConfiguration = config
-    
-    let realm = try! Realm()
 
     @IBOutlet var imageView: UIImageView!
     
@@ -74,6 +76,7 @@ class RandomImageViewController: UIViewController {
     }
     
     func getImgData(kind: String) {
+        self.delegate = animalDb
         let url = getUrl(kind: kind)
         AF.request(url, headers: headers).responseJSON { response in
             switch response.result {
@@ -83,9 +86,7 @@ class RandomImageViewController: UIViewController {
                 self.myData = json[0]["url"].string
                 animal.url = json[0]["url"].string ?? ""
                 animal.kind = kind
-                try! self.realm.write {
-                    self.realm.add(animal)
-                }
+                self.delegate?.saveAnimal(animal)
                 self.imageView.sd_setImage(with: URL(string: animal.url), placeholderImage: UIImage(named: "placeholder.png"))
             case .failure(let error):
                 print(error)

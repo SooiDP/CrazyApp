@@ -22,6 +22,8 @@
 		C2808FB225A9E28F00D979DB /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C2808FB125A9E28F00D979DB /* RealmSwift */; };
 		C2808FB425A9F14900D979DB /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808FB325A9F14900D979DB /* Animal.swift */; };
 		C2808FB625AB30E700D979DB /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808FB525AB30E600D979DB /* GalleryViewController.swift */; };
+		C2808FB825AB367D00D979DB /* AnimalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808FB725AB367D00D979DB /* AnimalDelegate.swift */; };
+		C2808FBC25AB384D00D979DB /* AnimalPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808FBB25AB384D00D979DB /* AnimalPersistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		C2808FA225A625E800D979DB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C2808FB325A9F14900D979DB /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		C2808FB525AB30E600D979DB /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		C2808FB725AB367D00D979DB /* AnimalDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDelegate.swift; sourceTree = "<group>"; };
+		C2808FBB25AB384D00D979DB /* AnimalPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalPersistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		C2808F8525A3893E00D979DB /* CrazyApp */ = {
 			isa = PBXGroup;
 			children = (
+				C2808FBB25AB384D00D979DB /* AnimalPersistence.swift */,
 				C2808FB525AB30E600D979DB /* GalleryViewController.swift */,
 				C2808F8625A3893E00D979DB /* AppDelegate.swift */,
 				C2808F8825A3893E00D979DB /* SceneDelegate.swift */,
@@ -84,6 +89,7 @@
 				C2808F9325A3894300D979DB /* LaunchScreen.storyboard */,
 				C2808F9625A3894300D979DB /* Info.plist */,
 				C2808FB325A9F14900D979DB /* Animal.swift */,
+				C2808FB725AB367D00D979DB /* AnimalDelegate.swift */,
 			);
 			path = CrazyApp;
 			sourceTree = "<group>";
@@ -174,6 +180,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2808FB425A9F14900D979DB /* Animal.swift in Sources */,
+				C2808FBC25AB384D00D979DB /* AnimalPersistence.swift in Sources */,
+				C2808FB825AB367D00D979DB /* AnimalDelegate.swift in Sources */,
 				C2808F8B25A3893E00D979DB /* RandomImageViewController.swift in Sources */,
 				C2808FA325A625E800D979DB /* DetailViewController.swift in Sources */,
 				C2808FB625AB30E700D979DB /* GalleryViewController.swift in Sources */,
