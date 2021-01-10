@@ -15,21 +15,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOk-y1-5Gs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOk-y1-5Gs">
                                 <rect key="frame" x="178.5" y="734" width="57" height="30"/>
                                 <state key="normal" title="Random"/>
                                 <connections>
                                     <action selector="fetchRandomImage" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ghd-0W-WA4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9V-sg-AJ9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9V-sg-AJ9">
                                 <rect key="frame" x="318" y="734" width="30" height="30"/>
                                 <state key="normal" title="Dog"/>
                                 <connections>
                                     <action selector="fetchDogImage" destination="9pv-A4-QxB" eventType="touchUpInside" id="Kmx-Au-yhU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bh4-1Z-rwi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bh4-1Z-rwi">
                                 <rect key="frame" x="66" y="734" width="30" height="30"/>
                                 <state key="normal" title="Cat"/>
                                 <connections>
@@ -45,10 +45,10 @@
                             <constraint firstItem="Idn-ec-d7S" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="52M-Lu-3NM"/>
                             <constraint firstItem="DOk-y1-5Gs" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="57:896" id="8NZ-P2-bH7"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="q9V-sg-AJ9" secondAttribute="trailing" constant="66" id="Bpt-hM-YGi"/>
+                            <constraint firstItem="DOk-y1-5Gs" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="FwX-sY-pWH"/>
                             <constraint firstItem="DOk-y1-5Gs" firstAttribute="top" secondItem="Idn-ec-d7S" secondAttribute="bottom" constant="8" id="IGA-s5-4fA"/>
                             <constraint firstItem="Bh4-1Z-rwi" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="66" id="JMA-do-8PS"/>
                             <constraint firstItem="Idn-ec-d7S" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="MMx-HP-IRJ"/>
-                            <constraint firstItem="DOk-y1-5Gs" firstAttribute="leading" secondItem="Bh4-1Z-rwi" secondAttribute="trailing" constant="82.5" id="Tcd-mW-Nsx"/>
                             <constraint firstItem="Idn-ec-d7S" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="acH-E2-BTj"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="DOk-y1-5Gs" secondAttribute="bottom" id="buE-u6-pVb"/>
                             <constraint firstItem="DOk-y1-5Gs" firstAttribute="baseline" secondItem="q9V-sg-AJ9" secondAttribute="baseline" id="f7O-SP-lU3"/>
@@ -57,7 +57,6 @@
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="DOk-y1-5Gs" secondAttribute="bottom" id="m49-ID-hlh"/>
                             <constraint firstItem="Bh4-1Z-rwi" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="ng7-J9-IXn"/>
                             <constraint firstItem="DOk-y1-5Gs" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="690" id="xKm-BX-EB6"/>
-                            <constraint firstItem="q9V-sg-AJ9" firstAttribute="leading" secondItem="DOk-y1-5Gs" secondAttribute="trailing" constant="82.5" id="y9j-MF-qow"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
