@@ -11,6 +11,11 @@ import SDWebImage
 import Alamofire
 import RealmSwift
 
+class AnimalTableViewCell: UITableViewCell {
+    @IBOutlet var animalLabel: UILabel!
+    @IBOutlet var animalImageView: UIImageView!
+}
+
 class GalleryViewController: UITableViewController {
     
     let headers: HTTPHeaders = [
@@ -33,9 +38,9 @@ class GalleryViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-        cell.textLabel?.text = "A very cute " + Array(realm.objects(Animal.self))[indexPath.row].kind
-        cell.imageView?.sd_setImage(with: URL(string: Array(realm.objects(Animal.self))[indexPath.row].url), placeholderImage:UIImage(named: "placeholder"))
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath) as! AnimalTableViewCell
+        cell.animalLabel?.text = Array(realm.objects(Animal.self))[indexPath.row].kind
+        cell.animalImageView?.sd_setImage(with: URL(string: Array(realm.objects(Animal.self))[indexPath.row].url), placeholderImage:UIImage(named: "placeholder"))
         return cell
     }
     

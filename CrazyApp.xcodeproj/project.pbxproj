@@ -10,19 +10,18 @@
 		C2808F8725A3893E00D979DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808F8625A3893E00D979DB /* AppDelegate.swift */; };
 		C2808F8925A3893E00D979DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808F8825A3893E00D979DB /* SceneDelegate.swift */; };
 		C2808F8B25A3893E00D979DB /* RandomImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808F8A25A3893E00D979DB /* RandomImageViewController.swift */; };
-		C2808F8D25A3893E00D979DB /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808F8C25A3893E00D979DB /* GalleryViewController.swift */; };
 		C2808F9025A3893E00D979DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2808F8E25A3893E00D979DB /* Main.storyboard */; };
 		C2808F9225A3894300D979DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2808F9125A3894300D979DB /* Assets.xcassets */; };
 		C2808F9525A3894300D979DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2808F9325A3894300D979DB /* LaunchScreen.storyboard */; };
 		C2808F9E25A38ED300D979DB /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C2808F9D25A38ED300D979DB /* SDWebImage */; };
 		C2808FA025A38ED300D979DB /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C2808F9F25A38ED300D979DB /* SDWebImageMapKit */; };
 		C2808FA325A625E800D979DB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808FA225A625E800D979DB /* DetailViewController.swift */; };
-		C2808FA525A77BD100D979DB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808FA425A77BD100D979DB /* TableViewCell.swift */; };
 		C2808FA825A77CBC00D979DB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C2808FA725A77CBC00D979DB /* Alamofire */; };
 		C2808FAD25A78FD500D979DB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C2808FAC25A78FD500D979DB /* SwiftyJSON */; };
 		C2808FB025A9E28F00D979DB /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C2808FAF25A9E28F00D979DB /* Realm */; };
 		C2808FB225A9E28F00D979DB /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C2808FB125A9E28F00D979DB /* RealmSwift */; };
 		C2808FB425A9F14900D979DB /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808FB325A9F14900D979DB /* Animal.swift */; };
+		C2808FB625AB30E700D979DB /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2808FB525AB30E600D979DB /* GalleryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +29,13 @@
 		C2808F8625A3893E00D979DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2808F8825A3893E00D979DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C2808F8A25A3893E00D979DB /* RandomImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageViewController.swift; sourceTree = "<group>"; };
-		C2808F8C25A3893E00D979DB /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		C2808F8F25A3893E00D979DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2808F9125A3894300D979DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2808F9425A3894300D979DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2808F9625A3894300D979DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2808FA225A625E800D979DB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		C2808FA425A77BD100D979DB /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C2808FB325A9F14900D979DB /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		C2808FB525AB30E600D979DB /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,16 +74,15 @@
 		C2808F8525A3893E00D979DB /* CrazyApp */ = {
 			isa = PBXGroup;
 			children = (
+				C2808FB525AB30E600D979DB /* GalleryViewController.swift */,
 				C2808F8625A3893E00D979DB /* AppDelegate.swift */,
 				C2808F8825A3893E00D979DB /* SceneDelegate.swift */,
 				C2808F8A25A3893E00D979DB /* RandomImageViewController.swift */,
-				C2808F8C25A3893E00D979DB /* GalleryViewController.swift */,
 				C2808FA225A625E800D979DB /* DetailViewController.swift */,
 				C2808F8E25A3893E00D979DB /* Main.storyboard */,
 				C2808F9125A3894300D979DB /* Assets.xcassets */,
 				C2808F9325A3894300D979DB /* LaunchScreen.storyboard */,
 				C2808F9625A3894300D979DB /* Info.plist */,
-				C2808FA425A77BD100D979DB /* TableViewCell.swift */,
 				C2808FB325A9F14900D979DB /* Animal.swift */,
 			);
 			path = CrazyApp;
@@ -176,11 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2808F8D25A3893E00D979DB /* GalleryViewController.swift in Sources */,
 				C2808FB425A9F14900D979DB /* Animal.swift in Sources */,
 				C2808F8B25A3893E00D979DB /* RandomImageViewController.swift in Sources */,
 				C2808FA325A625E800D979DB /* DetailViewController.swift in Sources */,
-				C2808FA525A77BD100D979DB /* TableViewCell.swift in Sources */,
+				C2808FB625AB30E700D979DB /* GalleryViewController.swift in Sources */,
 				C2808F8725A3893E00D979DB /* AppDelegate.swift in Sources */,
 				C2808F8925A3893E00D979DB /* SceneDelegate.swift in Sources */,
 			);
