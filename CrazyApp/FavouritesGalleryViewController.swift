@@ -11,36 +11,31 @@ import SDWebImage
 import Alamofire
 import RealmSwift
 
-class AnimalTableViewCell: UITableViewCell {
-    @IBOutlet var animalLabel: UILabel!
-    @IBOutlet var animalImageView: UIImageView!
-}
-
-class GalleryViewController: UITableViewController {
+class FavouritesGalleryViewController: UITableViewController {
     
     let headers: HTTPHeaders = [
         "x-api-key": "8eb84f83-3fbd-4d06-8bc8-e2a80f9350c1"
     ]
     
-//    var animals = [Animal]()
+    var animals = [Animal]()
     
     let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        self.animals = Array(realm.objects(Animal.self))
+        self.animals = Array(realm.objects(Animal.self).filter("favourite == true"))
     }
     
     // SOURCE: hackingwithswift.com
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return realm.objects(Animal.self).count
+        return realm.objects(Animal.self).filter("favourite == true").count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath) as! AnimalTableViewCell
-        cell.animalLabel?.text = Array(realm.objects(Animal.self))[indexPath.row].kind
-        cell.animalImageView?.sd_setImage(with: URL(string: Array(realm.objects(Animal.self))[indexPath.row].url), placeholderImage:UIImage(named: "placeholder"))
+        cell.animalLabel?.text = self.animals[indexPath.row].kind
+        cell.animalImageView?.sd_setImage(with: URL(string: self.animals[indexPath.row].url), placeholderImage:UIImage(named: "placeholder"))
         return cell
     }
     
@@ -52,7 +47,7 @@ class GalleryViewController: UITableViewController {
             let destination = segue.destination as? DetailViewController,
             let imageIndex = tableView.indexPathForSelectedRow?.row
         {
-            destination.selectedImage = Array(realm.objects(Animal.self))[imageIndex].url
+            destination.selectedImage = self.animals[imageIndex].url
         }
     }
 }

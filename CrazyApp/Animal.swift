@@ -12,4 +12,5 @@ import RealmSwift
 class Animal: Object {
     @objc dynamic var url = ""
     @objc dynamic var kind = ""
+    @objc dynamic var favourite = false
 }

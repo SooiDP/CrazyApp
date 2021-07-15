@@ -25,17 +25,11 @@ class RandomImageViewController: UIViewController {
     var myData:String?
     
 //    let config = Realm.Configuration(
-//        schemaVersion: 1,
+//        schemaVersion: 5,
 //        migrationBlock: { migration, oldSchemaVersion in
-//            if(oldSchemaVersion < 1) {
+//            if(oldSchemaVersion < 5) {
 //                migration.enumerateObjects(ofType: Animal.className()) { oldObject, newObject in
-//                    let url = oldObject!["url"] as! String
-//
-//                    if (url.hasPrefix("https://cdn2.thedogapi")) {
-//                        newObject!["kind"] = "dog"
-//                    } else {
-//                        newObject!["kind"] = "cat"
-//                    }
+//                    newObject!["favourite"] = false
 //                }
 //            }
 //    })
