@@ -10,7 +10,10 @@ import UIKit
 import SDWebImage
 
 class DetailViewController: UIViewController {
-
+    
+    let animalDb = AnimalPersistence()
+    var delegate:AnimalDelegate?
+    
     @IBOutlet var imageView: UIImageView!
     var selectedImage: String?
     
@@ -22,5 +25,10 @@ class DetailViewController: UIViewController {
         }
     }
 
+    @IBAction func favourite(_ sender: Any) {
+        self.delegate = animalDb
+        self.delegate?.favouriteAnimal(selectedImage!)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newDataNotif"), object: nil)
+    }
 }
 

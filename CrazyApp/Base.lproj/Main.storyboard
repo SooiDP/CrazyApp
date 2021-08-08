@@ -82,14 +82,24 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ASW-pj-P7Y">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFs-fq-rlQ">
+                                <rect key="frame" x="348" y="749" width="46" height="39"/>
+                                <accessibility key="accessibilityConfiguration" identifier="favouriteButton"/>
+                                <state key="normal" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="favourite:" destination="yTo-It-AUm" eventType="touchUpInside" id="TsG-EV-ztf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RlX-Kg-4fH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ASW-pj-P7Y" firstAttribute="bottom" secondItem="RlX-Kg-4fH" secondAttribute="bottom" id="LPo-mk-8BF"/>
+                            <constraint firstItem="RlX-Kg-4fH" firstAttribute="trailing" secondItem="AFs-fq-rlQ" secondAttribute="trailing" constant="51" id="Mmv-Kp-p3D"/>
                             <constraint firstItem="ASW-pj-P7Y" firstAttribute="centerX" secondItem="Nla-Lp-Yz0" secondAttribute="centerX" id="Pgp-I4-FSx"/>
                             <constraint firstItem="ASW-pj-P7Y" firstAttribute="top" secondItem="RlX-Kg-4fH" secondAttribute="top" id="gWU-Y2-eNn"/>
                             <constraint firstItem="ASW-pj-P7Y" firstAttribute="leading" secondItem="RlX-Kg-4fH" secondAttribute="leading" id="l7n-ls-I7H"/>
+                            <constraint firstItem="RlX-Kg-4fH" firstAttribute="bottom" secondItem="AFs-fq-rlQ" secondAttribute="bottom" constant="38" id="yg4-IZ-06F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ns7-Gg-w1S"/>
@@ -113,11 +123,12 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="fJp-r7-Wu2" kind="relationship" relationship="viewControllers" id="FVj-Yw-EXy"/>
+                        <segue destination="gEO-gO-MXP" kind="relationship" relationship="viewControllers" id="Cst-c2-kTR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-87" y="24"/>
         </scene>
         <!--Gallery View Controller-->
         <scene sceneID="bk0-wS-uQa">
@@ -138,7 +149,7 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QWD-su-zGB">
                                             <rect key="frame" x="234" y="0.0" width="180" height="120"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="120" id="Rto-Ch-HZY"/>
+                                                <constraint firstAttribute="height" constant="120" id="7mQ-xw-5Q0"/>
                                                 <constraint firstAttribute="width" constant="180" id="p3u-zx-JeL"/>
                                             </constraints>
                                         </imageView>
@@ -179,7 +190,7 @@
         <!--Gallery-->
         <scene sceneID="3vM-O2-xBy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fJp-r7-Wu2" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="galleryController" automaticallyAdjustsScrollViewInsets="NO" id="fJp-r7-Wu2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Gallery" image="book.fill" catalog="system" id="jhf-ra-BfF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0bs-0K-or5">
@@ -195,10 +206,34 @@
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="393.75"/>
         </scene>
+        <!--Favourites-->
+        <scene sceneID="1gY-hB-rGH">
+            <objects>
+                <navigationController restorationIdentifier="favouritesController" automaticallyAdjustsScrollViewInsets="NO" id="gEO-gO-MXP" userLabel="Favourites" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" id="CEy-Bj-Cmi" userLabel="Favourites"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yYy-Mc-cnf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0uu-Mg-6Uc" kind="relationship" relationship="rootViewController" id="WKN-qt-T81"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P0N-fJ-HBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="1238"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PJb-0K-QSR"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

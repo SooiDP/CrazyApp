@@ -10,4 +10,5 @@ import Foundation
 
 protocol AnimalDelegate {
     func saveAnimal(_ animal: Animal)
+    func favouriteAnimal(_ animalUrl: String)
 }

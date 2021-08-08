@@ -21,20 +21,6 @@ class RandomImageViewController: UIViewController {
     ]
     
     var delegate:AnimalDelegate?
-    
-    var myData:String?
-    
-//    let config = Realm.Configuration(
-//        schemaVersion: 5,
-//        migrationBlock: { migration, oldSchemaVersion in
-//            if(oldSchemaVersion < 5) {
-//                migration.enumerateObjects(ofType: Animal.className()) { oldObject, newObject in
-//                    newObject!["favourite"] = false
-//                }
-//            }
-//    })
-//
-//    Realm.Configuration.defaultConfiguration = config
 
     @IBOutlet var imageView: UIImageView!
     
@@ -70,6 +56,7 @@ class RandomImageViewController: UIViewController {
     }
     
     func getImgData(kind: String) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newDataNotif"), object: nil)
         self.delegate = animalDb
         let url = getUrl(kind: kind)
         AF.request(url, headers: headers).responseJSON { response in
@@ -77,7 +64,6 @@ class RandomImageViewController: UIViewController {
             case .success(let value):
                 let animal = Animal()
                 let json = JSON(value)
-                self.myData = json[0]["url"].string
                 animal.url = json[0]["url"].string ?? ""
                 animal.kind = kind
                 self.delegate?.saveAnimal(animal)
